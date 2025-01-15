@@ -1,0 +1,38 @@
+<!DOCTYPE html> <!--Khai báo kiểu tài liệu HTML5, giúp trình duyệt hiểu rằng trang này sử dụng HTML5.-->
+<html lang="vi"> <!--ngôn ngữ của trang là tiếng Việt-->
+<head>
+    <meta charset="UTF-8"> <!--bộ mã hỗ trợ tiếng Việt-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--tối ưu việc hiển thị trên thiết bị di động-->
+    <title>Bảng phức tạp</title>
+</head>
+<body>
+    <h1>Bảng phức tạp</h1>
+    <table border="1"> <!--đường viền của bảng có kích thước là 1-->
+        <tr> <!--tạo 1 dòng trong bảng-->
+            <th rowspan="2">Môn học</th> <!--Thẻ <th> là thẻ tiêu đề của bảng, ô này chiếm hai dòng-->
+            <th colspan="2">Kỳ 1</th> <!--ô này sẽ chiếm hai cột-->
+            <th colspan="2">Kỳ 2</th>
+        </tr>
+        <tr>
+            <th>Điểm giữa kỳ</th>
+            <th>Điểm cuối kỳ</th>
+            <th>Điểm giữa kỳ</th>
+            <th>Điểm cuối kỳ</th>
+        </tr>
+        <tr>
+            <td>Toán</td>
+            <td>8</td>
+            <td>9</td>
+            <td>7</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Văn</td>
+            <td>7</td>
+            <td>8</td>
+            <td>6</td>
+            <td>9</td>
+        </tr>
+    </table>
+</body>
+</html>

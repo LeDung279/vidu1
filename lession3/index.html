@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .square{
+            border-radius: 50%; /*bo góc ở cả 4 phía*/
+            width: 200px;
+            height: 200px;
+            border: 10px;
+            border-color: aqua;
+            border-style: solid;
+            padding: 50px;
+            /*padding không có giá trị âm, giá trị auto*/
+            box-sizing: border-box;
+        }
+        .box-1{
+             /*margin không cộng dồn, nó ưu tiên lấy giá trị lớn hơn*/
+            background: red;
+            width: 100px;
+            height: 100px;
+            /* position: static; giá trị mặc định của position */
+
+            position: relative;
+            top: 10px;
+            right: 10px;
+            bottom: 20px;
+            left: 10px;
+        }
+        .child{ /*nếu không có relative thì nhận body làm cha*/
+            background: blue;
+            width: 20px;
+            height: 20px;
+            position: absolute; /*căn chỉnh vị trí dựa theo cha*/
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+        }
+        .btn{
+            position: fixed; /*căn chỉnh dựa theo màn hình*/
+            top: 100px;/*cách phía trên màn hình 100px*/
+        }
+        .btn-0{
+            position: sticky;
+            top: 20px;
+        }
+        .box-2{
+            background: red;
+            width: 100px;
+            height: 100px;
+            margin-left: 20px; /*viết margin không thì nó tự căn cho 4 phía*/
+            margin-top: 20px; /* viết "margin: 10px 20px" thì 10px là top, bottom, 20px là left, right*/
+            margin-bottom: 20px; /*viết margin: 10px 20px 30px thì 10 là top, 20 là left và right, 30 là bottom*/
+            margin-right: 20px; /*margin có thể có giá trị âm, giá trị auto (ra giữa màn hình chiều rộng còn khoảng trống, chỉ hiệu quả với thẻ block)*/
+        }
+        .box-3{
+            background: red;
+            width: 100px;
+            height: 100px;
+        }
+        .box-4{
+            background: green;
+            width: 100px;
+            height: 100px;
+            border: 100px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Ảnh đại diện</h2>
+        <img class="square" src="audio/images.jpg" alt="Ảnh đại diện">
+    </section>
+    <br>
+    <div class="box box-1">box-1
+        <div class="child">box-0</div>
+    </div>
+    <div class="box box-2">box-2</div>
+    <div class="box box-3">box-3</div>
+    <div class="box box-4">box-4</div><br>
+    <div>
+        <button class="btn">Back to top</button>
+    </div>
+    
+    <p>W3Schools is optimized for learning and training. 
+        <div>
+            <button class="btn-0">Back to top</button>
+        </div>Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our terms of use, cookie and privacy policy.
+
+        Copyright 1999-2025 by Refsnes Data. All Rights Reserved. W3Schools is Powered by W3.CSS.
+        Phleng Chat (tiếng Thái: เพลงชาติ) là quốc ca của Thái Lan. Bài quốc ca này do Luang Saranupraphan viết lời và nhà soạn nhạc người Nga Peter Feit (tên tiếng Thái: Phra Chenduriyang) phổ nhạc. Trong tiếng Thái, Phleng Chat (tiếng Thái: เพลงชาติ) là danh từ chung có nghĩa là quốc ca, còn tên gọi Phleng Chat Thai (tiếng Thái: เพลงชาติไทย) thường được dùng để chỉ cụ thể đến bài hát này.
+
+        Bài quốc ca được sáng tác trong vài ngày sau cuộc Đảo chính 1932 lật đổ chế độ quân chủ chuyên chế của Nhà vua Siam. Bài hát ban đầu do Khun Vichitmatra viết lời, và được xướng theo giai điệu gần giống quốc ca Ba Lan. Cùng với sự ra đời của nền dân chủ Thái Lan, bài ca này cũng thay thế bài Hoàng ca Phleng Sansoen Phra Barami làm quốc ca Thái.
+        
+        Năm 1934, chính phủ Thái Lan tổ chức tuyển chọn sáng tác nhạc và lời cho quốc ca chính thức. Về phần nhạc, có hai bài dự thi được chú ý, bao gồm bản nhạc mang âm hưởng dân tộc của Jangwang Tua Patayakosol và bản nhạc tiết tấu hiện đại của Phra Chenduriyang. Cuối cùng, bản nhạc của Phra Chenduriyang được chọn. Sau khi chọn được nhạc quốc ca, ban giám khảo bắt đầu thi tuyển phần lời. Theo kết quả tuyển chọn, phần lời ban đầu của Khun Vichitmatra đạt giải nhất và được chọn. Phần dự thi của Chan Khamvilai đạt giải nhì, được chọn làm lời hai.
+        
+        Năm 1939, tên nước được đổi từ Siam sang Thái Lan. Nhà nước lại tổ chức tuyển chọn sáng tác lời mới cho quốc ca. Lần này, phần dự thi của Luang Saranupraphan được chọn. Thủ tướng Phibunsongkhram ban hành đạo luật bắt buộc cử hành quốc ca và hát quốc ca hai lần một ngày trên toàn quốc, lúc 8 giờ và 18 giờ. Ngày nay, các trường học, xí nghiệp, công sở nhà nước cũng tổ chức thượng cờ và hạ cờ hai lần/ngày theo khung thời gian này. Các đài phát thanh, đài truyền hình phát quốc ca theo khung giờ tương tự.
+        Phleng Chat (tiếng Thái: เพลงชาติ) là quốc ca của Thái Lan. Bài quốc ca này do Luang Saranupraphan viết lời và nhà soạn nhạc người Nga Peter Feit (tên tiếng Thái: Phra Chenduriyang) phổ nhạc. Trong tiếng Thái, Phleng Chat (tiếng Thái: เพลงชาติ) là danh từ chung có nghĩa là quốc ca, còn tên gọi Phleng Chat Thai (tiếng Thái: เพลงชาติไทย) thường được dùng để chỉ cụ thể đến bài hát này.
+
+        Bài quốc ca được sáng tác trong vài ngày sau cuộc Đảo chính 1932 lật đổ chế độ quân chủ chuyên chế của Nhà vua Siam. Bài hát ban đầu do Khun Vichitmatra viết lời, và được xướng theo giai điệu gần giống quốc ca Ba Lan. Cùng với sự ra đời của nền dân chủ Thái Lan, bài ca này cũng thay thế bài Hoàng ca Phleng Sansoen Phra Barami làm quốc ca Thái.
+        
+        Năm 1934, chính phủ Thái Lan tổ chức tuyển chọn sáng tác nhạc và lời cho quốc ca chính thức. Về phần nhạc, có hai bài dự thi được chú ý, bao gồm bản nhạc mang âm hưởng dân tộc của Jangwang Tua Patayakosol và bản nhạc tiết tấu hiện đại của Phra Chenduriyang. Cuối cùng, bản nhạc của Phra Chenduriyang được chọn. Sau khi chọn được nhạc quốc ca, ban giám khảo bắt đầu thi tuyển phần lời. Theo kết quả tuyển chọn, phần lời ban đầu của Khun Vichitmatra đạt giải nhất và được chọn. Phần dự thi của Chan Khamvilai đạt giải nhì, được chọn làm lời hai.
+        
+        Năm 1939, tên nước được đổi từ Siam sang Thái Lan. Nhà nước lại tổ chức tuyển chọn sáng tác lời mới cho quốc ca. Lần này, phần dự thi của Luang Saranupraphan được chọn. Thủ tướng Phibunsongkhram ban hành đạo luật bắt buộc cử hành quốc ca và hát quốc ca hai lần một ngày trên toàn quốc, lúc 8 giờ và 18 giờ. Ngày nay, các trường học, xí nghiệp, công sở nhà nước cũng tổ chức thượng cờ và hạ cờ hai lần/ngày theo khung thời gian này. Các đài phát thanh, đài truyền hình phát quốc ca theo khung giờ tương tự.Phleng Chat (tiếng Thái: เพลงชาติ) là quốc ca của Thái Lan. Bài quốc ca này do Luang Saranupraphan viết lời và nhà soạn nhạc người Nga Peter Feit (tên tiếng Thái: Phra Chenduriyang) phổ nhạc. Trong tiếng Thái, Phleng Chat (tiếng Thái: เพลงชาติ) là danh từ chung có nghĩa là quốc ca, còn tên gọi Phleng Chat Thai (tiếng Thái: เพลงชาติไทย) thường được dùng để chỉ cụ thể đến bài hát này.
+
+        Bài quốc ca được sáng tác trong vài ngày sau cuộc Đảo chính 1932 lật đổ chế độ quân chủ chuyên chế của Nhà vua Siam. Bài hát ban đầu do Khun Vichitmatra viết lời, và được xướng theo giai điệu gần giống quốc ca Ba Lan. Cùng với sự ra đời của nền dân chủ Thái Lan, bài ca này cũng thay thế bài Hoàng ca Phleng Sansoen Phra Barami làm quốc ca Thái.
+        
+        Năm 1934, chính phủ Thái Lan tổ chức tuyển chọn sáng tác nhạc và lời cho quốc ca chính thức. Về phần nhạc, có hai bài dự thi được chú ý, bao gồm bản nhạc mang âm hưởng dân tộc của Jangwang Tua Patayakosol và bản nhạc tiết tấu hiện đại của Phra Chenduriyang. Cuối cùng, bản nhạc của Phra Chenduriyang được chọn. Sau khi chọn được nhạc quốc ca, ban giám khảo bắt đầu thi tuyển phần lời. Theo kết quả tuyển chọn, phần lời ban đầu của Khun Vichitmatra đạt giải nhất và được chọn. Phần dự thi của Chan Khamvilai đạt giải nhì, được chọn làm lời hai.
+        
+        Năm 1939, tên nước được đổi từ Siam sang Thái Lan. Nhà nước lại tổ chức tuyển chọn sáng tác lời mới cho quốc ca. Lần này, phần dự thi của Luang Saranupraphan được chọn. Thủ tướng Phibunsongkhram ban hành đạo luật bắt buộc cử hành quốc ca và hát quốc ca hai lần một ngày trên toàn quốc, lúc 8 giờ và 18 giờ. Ngày nay, các trường học, xí nghiệp, công sở nhà nước cũng tổ chức thượng cờ và hạ cờ hai lần/ngày theo khung thời gian này. Các đài phát thanh, đài truyền hình phát quốc ca theo khung giờ tương tự.Phleng Chat (tiếng Thái: เพลงชาติ) là quốc ca của Thái Lan. Bài quốc ca này do Luang Saranupraphan viết lời và nhà soạn nhạc người Nga Peter Feit (tên tiếng Thái: Phra Chenduriyang) phổ nhạc. Trong tiếng Thái, Phleng Chat (tiếng Thái: เพลงชาติ) là danh từ chung có nghĩa là quốc ca, còn tên gọi Phleng Chat Thai (tiếng Thái: เพลงชาติไทย) thường được dùng để chỉ cụ thể đến bài hát này.
+
+        Bài quốc ca được sáng tác trong vài ngày sau cuộc Đảo chính 1932 lật đổ chế độ quân chủ chuyên chế của Nhà vua Siam. Bài hát ban đầu do Khun Vichitmatra viết lời, và được xướng theo giai điệu gần giống quốc ca Ba Lan. Cùng với sự ra đời của nền dân chủ Thái Lan, bài ca này cũng thay thế bài Hoàng ca Phleng Sansoen Phra Barami làm quốc ca Thái.
+        
+        Năm 1934, chính phủ Thái Lan tổ chức tuyển chọn sáng tác nhạc và lời cho quốc ca chính thức. Về phần nhạc, có hai bài dự thi được chú ý, bao gồm bản nhạc mang âm hưởng dân tộc của Jangwang Tua Patayakosol và bản nhạc tiết tấu hiện đại của Phra Chenduriyang. Cuối cùng, bản nhạc của Phra Chenduriyang được chọn. Sau khi chọn được nhạc quốc ca, ban giám khảo bắt đầu thi tuyển phần lời. Theo kết quả tuyển chọn, phần lời ban đầu của Khun Vichitmatra đạt giải nhất và được chọn. Phần dự thi của Chan Khamvilai đạt giải nhì, được chọn làm lời hai.
+        
+        Năm 1939, tên nước được đổi từ Siam sang Thái Lan. Nhà nước lại tổ chức tuyển chọn sáng tác lời mới cho quốc ca. Lần này, phần dự thi của Luang Saranupraphan được chọn. Thủ tướng Phibunsongkhram ban hành đạo luật bắt buộc cử hành quốc ca và hát quốc ca hai lần một ngày trên toàn quốc, lúc 8 giờ và 18 giờ. Ngày nay, các trường học, xí nghiệp, công sở nhà nước cũng tổ chức thượng cờ và hạ cờ hai lần/ngày theo khung thời gian này. Các đài phát thanh, đài truyền hình phát quốc ca theo khung giờ tương tự.</p>
+</body>
+</html>

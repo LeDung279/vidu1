@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <!--1 file html có thể có nhiều file css, 1 file css có thể được dùng cho nhiều file html-->
+    <style>
+        #h4{
+            color: blueviolet;
+        }
+        h2{ /*selector theo tag */
+            color: blue;
+        }
+        #id_page{ /*selector theo id */
+            color: brown;
+        }
+        .class_page{ /*selector theo class */
+            color: aqua;
+        }
+        #h1{
+            color: red;
+        }
+        .heading_h1{
+            color: pink;
+        }
+        h1{
+            color: rgb(0, 0, 0);
+            font-family: arial;
+            font-size: 30px;
+            font-weight: lighter;
+            text-align: center; /*căn chỉnh*/
+            width: 50%; /*chiều rộng*/
+            background-color: aqua;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: brown"; id="h1" class="heading_h1">hi</h1>
+    
+    <h2>hi</h2>
+    <h2>hi</h2>
+    <h3>hi</h3>
+    <h3>xin chào</h3>
+    <h4>hi</h4>
+    <h5>hi</h5>
+    <h6>hi</h6>
+    <h100>hi</h100><br><br> <!--vô nghĩa-->
+    <a href="https://vnexpress.net" target="_top">VnExpress</a>
+    <p id="id_page">
+        Chiều 30/12, Bộ Khoa học và Công nghệ công bố kết quả xếp hạng Chỉ số đổi mới sáng tạo cấp địa phương năm 2024 (viết tắt là PII - Provincial Innovation Index). Chỉ số này cung cấp bức tranh thực tế, tổng thể về hiện trạng mô hình phát triển kinh tế, xã hội dựa trên khoa học công nghệ và đổi mới sáng tạo của từng địa phương.
+
+        Kết quả, Hà Nội là địa phương có điểm số cao nhất, đạt 60,76 điểm, xếp hạng 1. Tiếp sau đó là TP HCM (hạng 2), Hải Phòng (hạng 3), Bà Rịa- Vũng Tàu (hạng 4), Đà Nẵng (hạng 5), Quảng Ninh (hạng 6), Cần Thơ (hạng 7), Bình Dương (hạng 8), Thái Nguyên (hạng 9), Bắc Giang (hạng 10). Cao Bằng vẫn là địa phương có điểm số thấp nhất, đạt 23,95 điểm, xếp hạng 63.
+        
+        So với bảng xếp hạng top 10 năm 2023, Bắc Ninh bị tụt hạng xuống vị trí 11, thay vào đó là Bắc Giang.
+    </p>
+    <p class="class_page">
+        Từ ấy trong tôi bừng nắng hạ<br>
+        Mặt trời chân lý chói qua tim<br>
+        Hồn tôi là một vườn hoa lá<br>
+        Rất đậm hương và rộn tiếng chim...<br><br>
+
+        Tôi buộc lòng tôi với mọi người<br>
+        Để tình trang trải với trăm nơi<br>
+        Để hồn tôi với bao hồn khổ<br>
+        Gần gũi nhau thêm mạnh khối đời<br>
+
+        Tôi đã là con của vạn nhà<br>
+        Là em của vạn kiếp phôi pha<br>
+        Là anh của vạn đầu em nhỏ<br>
+        Không áo cơm, cù bất cù bơ...<br>
+    </p>
+    <img src="data:image/png;base64,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"
+        alt="ảnh"
+        width="100px"
+        height="100px">
+    <ul>
+        <li>sở thích 1</li>
+        <li>sở thích 2</li>
+        <li>sở thích 3</li>
+    </ul>
+    <ol type="I"> <!--type quyết định cách danh sách hiển thị-->
+        <li>sở thích 1</li>
+        <li>sở thích 2</li>
+        <li>sở thích 3</li>
+    </ol>
+    <div><!--thẻ div để nhóm nội dung block: chiều rộng toàn màn hình, xuống dòng-->
+        <a href="https://vnexpress.net" target="_top">VnExpress</a>
+    </div>
+    <div>
+        <a href="https://vnexpress.net" target="_top">VnExpress</a>
+    </div>
+    <span><!--span để nhóm nội dung inline: chiều rộng bằng nội dung phần tử, nằm cùng dòng-->
+        <a href="https://vnexpress.net" target="_top">VnExpress</a>
+    </span>
+    <span>
+        <a href="https://vnexpress.net" target="_top">VnExpress</a>
+    </span><br>
+    <input type="text" readonly placeholder="nhập"><!--nhập dữ liệu trên 1 dòng--><br>
+    <input type="button"><br>
+    <input type="password" disabled><br>
+    <input type="checkbox"> <input type="checkbox"> <input type="checkbox"><br>
+    <input type="radio"> <input type="radio"><br>
+    <input type="date"><br>
+    <input type="number">
+    <br>
+    <textarea cols="10" rows="5"></textarea><br>
+    <table border="2"> <!--đường viền của bảng có kích thước là 1-->
+        <tr> <!--tạo 1 dòng trong bảng-->
+            <th rowspan="2">Môn học</th> <!--Thẻ <th> là thẻ tiêu đề của bảng, ô này chiếm hai dòng-->
+            <th colspan="2">Kỳ 1</th> <!--ô này sẽ chiếm hai cột-->
+            <th colspan="2">Kỳ 2</th>
+        </tr>
+        <tr>
+            <th>Điểm giữa kỳ</th>
+            <th>Điểm cuối kỳ</th>
+            <th>Điểm giữa kỳ</th>
+            <th>Điểm cuối kỳ</th>
+        </tr>
+        <tr>
+            <td>Toán</td>
+            <td>8</td>
+            <td>9</td>
+            <td>7</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Văn</td>
+            <td>7</td>
+            <td>8</td>
+            <td>6</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>cột 1 hàng 5</td>
+            <td>cột 2 hàng 5</td>
+            <td>cột 3 hàng 5</td>
+            <td>cột 4 hàng 5</td>
+            <td>cột 5 hàng 5</td>
+        </tr>
+    </table>
+    <iframe src="https://baomoi.com"></iframe><!--nhúng trang web khác vào-->
+    <!--không thể nhúng trang web chặn mình-->
+    <br>
+    <select>
+        <option>lựa chọn 1</option>
+        <option>lựa chọn 2</option>
+        <option>lựa chọn 3</option>
+    </select><br>
+    <marquee>xin chào</marquee>
+</body>
+</html>

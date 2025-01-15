@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact form</title>
+    <style>
+        body{
+            margin: 40px;
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px;
+        }
+        .text1{
+            width: 400px;
+            height: 35px;
+        }
+        .text2{
+            width: 400px;
+            height: 35px;
+        }
+        .text3{
+            width: 850px;
+            height: 35px;
+        }
+        textarea{
+            width: 850px;
+            height: 200px;
+        }
+        div{
+            margin: 10px;
+        }
+        .line1{
+            display: flex;
+            gap: 43px; /* Khoảng cách giữa các input */
+        }
+        button{
+            background-color: rgb(77, 186, 253);
+            height: 30px;
+            color: white;
+        }
+        button:hover{
+            background-color: aquamarine;
+        }
+        .line4{
+            display: flex;
+            gap: 480px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Get in touch with us by by filling contact form below</h2>
+    <form action="#">
+        <div class="line1">
+            <input class="text1" type="text" placeholder="*Enter your full name">
+            <input class="text2" type="text" placeholder="*Enter your email address">
+        </div>
+        <div>
+            <input class="text3" type="text" placeholder="Enter your subject">
+        </div>
+        <div>
+            <textarea placeholder="*Your message here"></textarea>
+        </div>
+        <div class="line4">
+            <button>Send message</button>
+            <span>*Please fill all required form field, thanks!</span>
+        </div>
+    </form>
+</body>
+</html>

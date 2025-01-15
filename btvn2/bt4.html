@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        form{
+            width: 280px;
+            height: 280px;
+            border: 4px outset;
+            border-color: rgb(213, 211, 211);
+            padding: 10px;
+            margin: 10px;
+        }
+        .a{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <h1>HTML Form</h1>
+        <div><label for="fname" class="a">First name:</label>
+        <input type="text" id="fname" name="fname" class="b"></div><br>
+
+        <div><label for="lname" class="a">Last name:</label>
+        <input type="text" id="lname" name="lname" class="b"></div><br>
+
+        <div><label for="email" class="a">Email:</label>
+        <input type="email" id="email" name="email" class="b"></div><br>
+
+        <div><input type="radio" id="male" name="male" class="b">
+        <label for="male" class="a">Male</label><br>
+
+        <input type="radio" id="female" name="female" class="b">
+        <label for="female" class="a">Female</label></div><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>

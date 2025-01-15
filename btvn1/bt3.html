@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhúng Video và Âm thanh</title>
+</head>
+<body>
+    <h1>Nhúng Video và Âm thanh</h1>
+    
+    <h2>Video YouTube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vPcKN4HjoiI" frameborder="0" allowfullscreen></iframe>
+    
+    <h2>Tệp âm thanh</h2>
+    <audio controls>
+        <source src="audio/DriftveilCity.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ thẻ âm thanh.
+    </audio>
+</body>
+</html>
+<!--
+Thẻ <iframe> được dùng để nhúng nội dung từ một trang web khác vào trang của bạn. Cụ thể ở đây là nhúng video từ YouTube.
+width="560" và height="315": Chỉ định kích thước của video nhúng (560px chiều rộng và 315px chiều cao).
+src="https://www.youtube.com/embed/VIDEO_ID": Địa chỉ URL của video YouTube bạn muốn nhúng.
+Thay thế VIDEO_ID bằng ID thực tế của video trên YouTube (ví dụ: https://www.youtube.com/embed/dQw4w9WgXcQ).
+frameborder="0": Loại bỏ đường viền xung quanh iframe.
+allowfullscreen: Cho phép video được phát ở chế độ toàn màn hình khi người dùng nhấn vào biểu tượng chế độ toàn màn hình trên video.-->
+
+<!--
+<audio controls>: Thẻ <audio> dùng để nhúng âm thanh vào trang web.
+    Thuộc tính controls thêm các điều khiển (play, pause, volume) cho người dùng.
+<source src="path_to_audio_file.mp3" type="audio/mpeg">: Thẻ <source> chỉ định tệp âm thanh mà bạn muốn phát.
+    Bạn cần thay thế path_to_audio_file.mp3 bằng đường dẫn thực tế đến tệp âm thanh của bạn.
+    Thuộc tính type="audio/mpeg" xác định định dạng của tệp âm thanh là MP3.
+Trình duyệt của bạn không hỗ trợ thẻ âm thanh.: Đây là một thông điệp thay thế, sẽ được hiển thị nếu trình duyệt của người dùng
+không hỗ trợ thẻ <audio>. Điều này giúp người dùng biết rằng có sự cố trong việc phát âm thanh.-->

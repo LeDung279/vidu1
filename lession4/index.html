@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+           
+            /*opacity: 1;độ trong suốt, càng gần o càng mờ*/
+        
+        .parent{ /*trục chính mặc đinh: trái sang phải, trên xuống dưới*/
+            display: flex;
+            height: 300px;
+            flex-direction: row;/*thay đổi hướng trục chính*, gồm row, row-reverse, column, column-reverse*/
+            /*Theo mặc định, item sẽ tự động thay đổi kích thước phần tử để nó luôn hiển thị trên cùng một dòng dù bạn có resize trình duyệt theo kích thước nào. Để thay đổi điều này, ta sử dụng flex-wrap*/
+            flex-wrap: wrap;/*flex warp cho phép item tự động xuống dòng nếu chiều ngang hết chỗ: nowrap, wrap, wrap-reverse*/
+            flex-flow: row wrap;/*gộp chung flex-direction và flex-wrap*/
+            justify-content: space-around;/*căn chỉnh vị trí item theo hướng trục chính (trái sang phải), gồm: flex-start, flex-end, center, space-between, space-around, space-evenly*/
+            align-items: flex-start;/*điều chỉnh vị trí bắt đầu và căn chỉnh các item bên trong container theo dọc theo trục cross axis, chiều ngang hoặc chiều dọc tùy thuộc vào flex-direction, gồm: stretch, flex-start, flex-end, center, baseline*/
+            align-content: flex-start;/*căn chỉnh khoảng cách các item bên trong container theo dọc theo trục cross axis, chiều ngang hoặc chiều dọc tùy thuộc vào flex-direction*/
+        }
+        .box{
+            width: 100px;
+            height: 200px;
+        }
+        .box-green{
+            background-color: green;
+        }
+        .box-red{
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box-pink{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- <div class="parent">
+        <p class="child">Nội dung 1</p>
+        <div class="box">
+            <h5>hi</h5> chỉ có cha con mới bị ảnh hưởng bởi flex
+        </div>
+    </div> -->
+    <div class="parent">
+        <div style="order: -3; align-self: center;" class="box box-green">1</div>
+        <div style="order: 1;" class="box box-red">2</div>
+        <div style="order: 2;" class="box box-pink">3</div>
+        <!-- order quyết định thứ tự hiển thị của item từ trái sang phải, order mặc định là 0 chỉ sử dụng với item chứ không dùng với container-->
+        <!-- Thuộc tính align-self có tác dụng tương tự như align-items của phần container nhưng sử dụng riêng cho từng item, bạn có thể dùng nó để đặt lại vị trí cho một số item mà align-items đã quy định.-->
+    </div>
+</body>
+</html>

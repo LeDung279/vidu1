@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;/*Đảm bảo body có chiều cao tối thiểu là 100% chiều cao của viewport.*/
+        }
+        header, footer{
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex: 1;/*content chiếm phần không gian còn lại trong body*/
+        }
+        .column{           
+            flex: 1;/*Mỗi column sẽ chiếm phần không gian đều nhau*/
+            margin: 5px;
+            padding: 20px;
+            border: 1px;
+            border-style: solid;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <div class="content">
+        <div class="column">Column 1</div>
+        <div class="column">Column 2</div>
+    </div>
+    <footer>Footer</footer>
+</body>
+</html>
