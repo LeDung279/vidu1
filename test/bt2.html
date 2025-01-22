@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Media Query cho màn hình nhỏ (dưới 768px) */
+    @media (max-width: 768px) {
+        .categories {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 10px;
+        }
+
+        .filter {
+            width: 100%;
+            position: relative;
+            left: 0;
+            bottom: 0;
+            display: block;
+        }
+
+        .search-container {
+            width: 80%;
+            margin-right: 0;
+        }
+
+        .sort-container, .order-container {
+            width: 80%;
+            margin: 5px 0;
+        }
+
+        .content {
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            display: block;
+        }
+
+        .images {
+            width: 100%;
+            height: auto;
+            margin: 5%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .text {
+            width: 100%;
+        }
+
+        .pages {
+            display: flex;
+            justify-content: center;
+            padding-left: 0;
+        }
+
+        .page {
+            width: 30px;
+            padding: 5px;
+        }
+    }
+
+    /* Media Query cho màn hình nhỏ hơn 576px (Smartphone) */
+    @media (max-width: 576px) {
+        .navbar-2 {
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .navbar2-left {
+            margin-bottom: 10px;
+        }
+
+        .categories {
+            width: 100%;
+            padding: 10px 0;
+            margin-top: 10px;
+        }
+
+        .filter {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .search-container {
+            width: 90%;
+            margin: 5px 0;
+        }
+
+        .sort-container, .order-container {
+            width: 90%;
+            margin: 5px 0;
+        }
+
+        .content {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .images {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .pages {
+            display: flex;
+            justify-content: center;
+        }
+
+        .page {
+            width: 25px;
+            padding: 5px;
+        }
+    }
+        .navbar-2 {
+            display: flex;
+            justify-content: space-between;
+            background: #fff2cd;
+            border: 1px solid #cfbc82;
+            padding: 8px 12px;
+        }
+        .navbar2-left {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+        .navbar2-logo {
+            background: #fdb3f3;
+            width: 40px;
+            height: 40px;
+            border: 1px solid black;
+            border-radius: 50%;
+            margin-right: 12px;
+        }
+        .navbar2-pages {
+            display: flex;
+            margin-right: 20px;
+            /* padding: 6px 12px; */
+        }
+        .navbar2-page {
+            padding: 6px 12px;
+        }
+        .page-active {
+            border: 1px solid #99b37f;
+            border-radius: 5px;
+            background: #b0e0ec;
+        }
+        footer{
+            background-color:bisque;            
+            padding: 8px 15px;
+            border: 1px solid #cfbc82;            
+        }
+        .categories{
+            border: 2px solid black;
+            width: 12%;
+            padding-left: 0.7%;
+            margin-left: 2%;
+            margin-top: 1%;
+        }
+        .show-more{
+            border: 1px solid;
+            border-radius: 5px;
+            width: fit-content;
+            padding: 3px;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            background-color: aquamarine;
+        }
+        .filter{
+            width: 80%;
+            border: 2px solid;
+            position: relative;
+            left: 15%;
+            bottom: 225px;
+            display: flex;
+        }
+        .search-container{            
+            border: 1px solid;
+            border-radius: 5px;
+            width: 40%;
+            margin: 10px;
+            margin-right: 32%;
+            
+        }
+        .sort-container{
+            border: 1px solid;
+            border-radius: 5px;
+            width: 10%;            
+            margin: 5px;
+        }
+        .order-container{
+            border: 1px solid;
+            border-radius: 5px;
+            width: 10%;
+            margin: 5px;
+        }
+        .content{
+            width: 80%;
+            border: 0px solid;
+            position: relative;
+            left: 15%;
+            bottom: 220px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .images{
+            width: 20%;
+            height: 250px;
+            border: 0px solid;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 2%;
+        }
+        .image{
+            width: 100%;
+            border: 1px solid;
+            height: 180px;
+            margin: 1%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(226, 226, 226);
+        }
+        .text{
+            width: 100%;
+            border: 0px solid;            
+        }
+        .pages{
+            display: flex;
+            padding-left: 14%;
+        }
+        .page{
+            border: 1px solid;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 5px;
+            width: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar-2">
+			<div class="navbar2-left">
+				<div class="navbar2-logo"></div>
+				<h5 class="navbar2-brand-name">My Shop</h5>
+			</div>
+			<div class="navbar2-pages">
+				<div class="navbar2-page">Home</div>
+				<div class="navbar2-page">About</div>
+				<div class="navbar2-page">Contact</div>
+				<div class="navbar2-page page-active">My Cart (0)</div>
+			</div>
+		</div>
+    </header>
+    <div class="categories">
+        <h5>Categories</h5>
+        <i style="margin-right: 9px;" class="bi bi-check-square-fill"></i>
+        <span>Devices</span><br>
+        <i style="margin-right: 9px;" class="bi bi-check-square-fill"></i>
+        <span>Funitures</span><br>
+        <i style="margin-right: 9px;" class="bi bi-check-square-fill"></i>
+        <span>Cloths</span><br>
+        <i style="margin-right: 9px;" class="bi bi-check-square-fill"></i>
+        <span>Foods & Drink</span><br>
+        <i style="margin-right: 9px;" class="bi bi-check-square-fill"></i>
+        <span>Materials</span><br>
+        <i style="margin-right: 9px;" class="bi bi-check-square-fill"></i>
+        <span>Computers</span><br>
+        <div class="show-more">Show more...</div>
+    </div>
+    <div class="filter">
+        <div class="search-container">
+            <span style="margin-left: 1%;">Enter keyword to search</span>
+            <i style="margin-left: 55%;" class="fas fa-search"></i>
+        </div>
+        <div class="sort-container">
+            <span style="margin-left: 3%;">Sort by</span>
+            <i style="margin-left: 34%;" class="bi bi-chevron-down"></i>
+        </div>
+        <div class="order-container">
+            <span style="margin-left: 3%;">Order by</span>
+            <i style="margin-left: 25%;" class="bi bi-chevron-down"></i>
+        </div>
+    </div>
+    <div class="content">
+        <div class="images">
+            <div class="image">
+                <p>IMAGE</p>
+            </div>
+            <div class="text">
+                <p style="font-weight: bold; margin-left: 1%;">Lorem ipsum dolor</p>
+                <span style="color: blue; font-style: italic; margin-left: 1%;">129.01$</span>
+                <i style="margin-left: 51%;" class="bi bi-chevron-down"></i>
+                <span style="color: red;">10%</span>
+            </div>
+        </div>
+        <div class="images">
+            <div class="image">
+                <p>IMAGE</p>
+            </div>
+            <div class="text">
+                <p style="font-weight: bold; margin-left: 1%;">Lorem ipsum dolor</p>
+                <span style="color: blue; font-style: italic; margin-left: 1%;">129.01$</span>
+                <i style="margin-left: 51%;" class="bi bi-chevron-down"></i>
+                <span style="color: red;">10%</span>
+            </div>
+        </div>
+        <div class="images">
+            <div class="image">
+                <p>IMAGE</p>
+            </div>
+            <div class="text">
+                <p style="font-weight: bold; margin-left: 1%;">Lorem ipsum dolor</p>
+                <span style="color: blue; font-style: italic; margin-left: 1%;">129.01$</span>
+                <i style="margin-left: 51%;" class="bi bi-chevron-down"></i>
+                <span style="color: red;">10%</span>
+            </div>
+        </div>
+        <div class="images">
+            <div class="image">
+                <p>IMAGE</p>
+            </div>
+            <div class="text">
+                <p style="font-weight: bold; margin-left: 1%;">Lorem ipsum dolor</p>
+                <span style="color: blue; font-style: italic; margin-left: 1%;">129.01$</span>
+                <i style="margin-left: 51%;" class="bi bi-chevron-down"></i>
+                <span style="color: red;">10%</span>
+            </div>
+        </div>
+        <div class="images">
+            <div class="image">
+                <p>IMAGE</p>
+            </div>
+            <div class="text">
+                <p style="font-weight: bold; margin-left: 1%;">Lorem ipsum dolor</p>
+                <span style="color: blue; font-style: italic; margin-left: 1%;">129.01$</span>
+                <i style="margin-left: 51%;" class="bi bi-chevron-down"></i>
+                <span style="color: red;">10%</span>
+            </div>
+        </div>
+        <div class="images">
+            <div class="image">
+                <p>IMAGE</p>
+            </div>
+            <div class="text">
+                <p style="font-weight: bold; margin-left: 1%;">Lorem ipsum dolor</p>
+                <span style="color: blue; font-style: italic; margin-left: 1%;">129.01$</span>
+                <i style="margin-left: 51%;" class="bi bi-chevron-down"></i>
+                <span style="color: red;">10%</span>
+            </div>
+        </div>
+        <div class="images">
+            <div class="image">
+                <p>IMAGE</p>
+            </div>
+            <div class="text">
+                <p style="font-weight: bold; margin-left: 1%;">Lorem ipsum dolor</p>
+                <span style="color: blue; font-style: italic; margin-left: 1%;">129.01$</span>
+                <i style="margin-left: 51%;" class="bi bi-chevron-down"></i>
+                <span style="color: red;">10%</span>
+            </div>
+        </div>
+        <div class="images">
+            <div class="image">
+                <p>IMAGE</p>
+            </div>
+            <div class="text">
+                <p style="font-weight: bold; margin-left: 1%;">Lorem ipsum dolor</p>
+                <span style="color: blue; font-style: italic; margin-left: 1%;">129.01$</span>
+                <i style="margin-left: 51%;" class="bi bi-chevron-down"></i>
+                <span style="color: red;">10%</span>
+            </div>
+        </div>
+    </div>
+    <div class="pages">
+        <div class="page">
+            1
+        </div>
+        <div class="page">
+            2
+        </div>
+        <div class="page">
+            3
+        </div>
+        <div class="page" style="width: 40px;">
+            ...
+        </div>
+        <div class="page">
+            50
+        </div>
+    </div>
+    <footer>
+        <div class="footer-top">
+            <h5>My Shop</h5>
+        </div>
+        <div class="footer-bottom">
+            <table border="0">
+                <tr>
+                    <td><i class="bi bi-geo-alt-fill"></i></td>
+                    <td>22C Somewhere, Ha Noi</td>
+                    <td style="visibility: hidden;">Ha Noi</td>
+                    <td><i class="bi bi-telephone-fill"></i></td>
+                    <td>0987654321</td>
+                </tr>
+            </table>
+        </div>
+    </footer>
+</body>
+</html>
